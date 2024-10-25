@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   delete "logout", to: "sessions#destroy"
 
+  get "password/reset", to: "password_resets#new"
+  post "password/reset", to: "password_resets#create"
+
   root to: "main#index"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
